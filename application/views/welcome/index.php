@@ -1,28 +1,25 @@
 <div class="container">
-  <div class="jumbotron">
-    <h1>My First Bootstrap Page</h1>
-    <p>Resize this responsive page to see the effect!</p> 
-  </div>
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    <div class="jumbotron">
+        <h1>Welcome</h1>
     </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    <div class="row">
+        <div class="col-sm-12" id="loginform">
+            <form action="welcome/home" method="post" role="form">
+                <div class="form-group">
+                    <label for="email">Username / E-mail:</label>
+                    <input type="email" class="form-control" name="username" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" name="password" id="pwd" placeholder="Enter password">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <?php echo anchor("register","Register now"); ?>
+            </form>
+
+        </div>
     </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-  </div>
 </div>
-<?php 
-  echo form_open();
-  echo form_label("test");
-  echo form_close();
-?>
